@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package sample;
 
 import org.junit.AfterClass;
@@ -22,9 +27,17 @@ public class MasGrandeTest {
     public static void tearDownClass() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    /**
+     * Test of max method, of class MasGrande.
+     */
+    @Test
+    public void testMax() {
+        System.out.println("* MasGrandeTest: testMax()");
+        assertEquals(0, MasGrande.max(new int[]{}));
+        assertEquals(5, MasGrande.max(new int[]{3,4,5}));
+        assertEquals(1, MasGrande.max(new int[]{1}));
+        assertEquals(5, MasGrande.max(new int[]{5,4,3}));
+        assertEquals(5, MasGrande.max(new int[]{5,5,5}));
+    }
+    
 }
